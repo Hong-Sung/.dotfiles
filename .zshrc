@@ -1,8 +1,6 @@
 # Quadminers
-RTE_SDK=$HOME/qm_dpdk/dpi_lib/dpdk-19.11
-export RTE_SDK
-RTE_TARGET=build
-export RTE_TARGET
+export RTE_SDK=$HOME/qm_dpdk/dpi_lib/dpdk-19.11
+export RTE_TARGET=build
 
 # environment variables
 export LANG=en_US.UTF-8
@@ -10,12 +8,16 @@ export PATH=".:$HOME/bin:$PATH"
 
 # User specific alias
 alias h="history"
-alias so="source $HOME/.dotfiles/.zshrc"
-alias vi="vim -u $HOME/.dotfiles/.vimrc"
-alias vz="vim $HOME/.dotfiles/.zshrc"
+alias so="source $HOME/.zshrc"
+alias vz="vim $HOME/.zshrc"
+alias vi="vim -u $HOME/.vimrc"
 alias vssh="vim $HOME/.ssh/config"
 alias vgit="vim $HOME/.gitconfig"
 alias vgitignore="vim $HOME/.gitignore"
+
+# dotfiles
+alias dotfiles='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+dotfiles config status.showUntrackedFiles no
 
 # User specific functions
 ff()   { grep -Rnw . -e "$1"; }
