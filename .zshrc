@@ -24,3 +24,6 @@ ff()   { grep -Rnw . -e "$1"; }
 ffc()  { grep --include=\*.c -Rnw . -e "$1"; }
 ffh()  { grep --include=\*.h -Rnw . -e "$1"; }
 ffch() { grep --include=\*.{c,h} -Rnw . -e "$1"; }
+
+# Completion
+autoload -U compinit; compinit
