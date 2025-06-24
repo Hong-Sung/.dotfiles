@@ -1,10 +1,3 @@
-# Quadminers
-export RTE_SDK=$HOME/qm_dpdk/dpi_lib/dpdk-19.11
-export RTE_TARGET=build
-
-# environment variables
-export LANG=en_US.UTF-8
-export PATH=".:$HOME/bin:$PATH"
 
 # User specific alias
 alias h="history"
@@ -17,7 +10,7 @@ alias vgitignore="vim $HOME/.gitignore"
 
 # dotfiles
 alias dotfiles='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-dotfiles config status.showUntrackedFiles no
+#dotfiles config status.showUntrackedFiles no
 
 # User specific functions
 ff()   { grep -Rnw . -e "$1"; }
