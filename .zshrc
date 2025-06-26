@@ -1,7 +1,14 @@
+# history
+setopt APPEND_HISTORY                       # 세션 종료 시 기존 history에 추가
+setopt HIST_IGNORE_ALL_DUPS                 # 중복은 가장 나중 것만 저장
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
 
 # User specific alias
-alias h="history"
+alias h="history 1"
 alias so="source $HOME/.zshrc"
+alias ve="vim $HOME/.zshenv"
 alias vz="vim $HOME/.zshrc"
 alias vi="vim -u $HOME/.vimrc"
 alias vssh="vim $HOME/.ssh/config"
